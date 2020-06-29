@@ -139,7 +139,7 @@ class PuffinnLSH(BaseEstimator, ApproximateNearestNeighbor):
 
         return self
 
-    def kneighbors(self, X=None, n_candidates=None, return_distance=True) -> Union[Tuple[np.array, np.array], np.array]:
+    def kneighbors(self, X=None, n_candidates=None, return_distance=True):
         """ Retrieve k nearest neighbors.
 
         Parameters
@@ -335,7 +335,7 @@ class FalconnLSH(ApproximateNearestNeighbor):
 
     def kneighbors(self, X: np.ndarray = None,
                    n_candidates: int = None,
-                   return_distance: bool = True) -> Union[Tuple[np.array, np.array], np.array]:
+                   return_distance: bool = True):
         """ Retrieve k nearest neighbors.
 
         Parameters
@@ -420,7 +420,7 @@ class FalconnLSH(ApproximateNearestNeighbor):
 
     def radius_neighbors(self, X: np.ndarray = None,
                          radius: float = None,
-                         return_distance: bool = True) -> Union[Tuple[np.array, np.array], np.array]:
+                         return_distance: bool = True):
         """ Retrieve neighbors within a certain radius.
 
         Parameters
