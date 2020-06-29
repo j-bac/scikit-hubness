@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # SPDX-License-Identifier: BSD-3-Clause
 
-from __future__ import annotations
+# from __future__ import annotations
 from sklearn.utils.validation import check_is_fitted
 
 from .base import HubnessReduction
@@ -13,7 +13,7 @@ class SharedNearestNeighbors(HubnessReduction):
     def __init__(self):
         super().__init__()
 
-    def fit(self, neigh_dist, neigh_ind, X=None, *args, **kwargs) -> SharedNearestNeighbors:
+    def fit(self, neigh_dist, neigh_ind, X=None, *args, **kwargs):
         raise NotImplementedError(f'SNN is not yet implemented.')
 
     def transform(self, neigh_dist, neigh_ind, X=None, *args, **kwargs):
@@ -26,7 +26,7 @@ class SimhubIn(HubnessReduction):
     def __init__(self):
         super().__init__()
 
-    def fit(self, neigh_dist, neigh_ind, X=None, *args, **kwargs) -> SimhubIn:
+    def fit(self, neigh_dist, neigh_ind, X=None, *args, **kwargs):
         raise NotImplementedError(f'Simhub is not yet implemented.')
 
     def transform(self, neigh_dist, neigh_ind, X=None, *args, **kwargs):
