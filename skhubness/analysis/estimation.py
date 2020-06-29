@@ -206,7 +206,7 @@ class Hubness(BaseEstimator):
         self.random_state = random_state
         self.shuffle_equal = shuffle_equal
 
-    def fit(self, X, y=None) -> Hubness:
+    def fit(self, X, y=None):
         """ Fit indexed objects.
 
         Parameters
@@ -324,14 +324,14 @@ class Hubness(BaseEstimator):
 
         return self
 
-    def _k_neighbors(self, X_test: np.ndarray = None) -> np.array:
+    def _k_neighbors(self, X_test: np.ndarray = None):
         """ Return indices of nearest neighbors in X_train for each vector in X_test. """
 
         # if X_test is None, self distances are ignored
         indices = self.nn_index_.kneighbors(X_test, return_distance=False)
         return indices
 
-    def _k_neighbors_precomputed(self, D: np.ndarray, kth: np.ndarray, start: int, end: int) -> np.ndarray:
+    def _k_neighbors_precomputed(self, D: np.ndarray, kth: np.ndarray, start: int, end: int):
         """ Return indices of nearest neighbors in precomputed distance matrix.
 
         Notes
@@ -361,7 +361,7 @@ class Hubness(BaseEstimator):
                 indices[i, :] = d_idx[start:end]
         return indices
 
-    def _k_neighbors_precomputed_sparse(self, X: csr_matrix, n_samples: int = None) -> np.ndarray:
+    def _k_neighbors_precomputed_sparse(self, X: csr_matrix, n_samples: int = None):
         """ Find nearest neighbors in sparse distance matrix.
 
         Parameters
@@ -415,7 +415,7 @@ class Hubness(BaseEstimator):
         return k_neighbors
 
     @staticmethod
-    def _calc_skewness_truncnorm(k_occurrence: np.ndarray) -> float:
+    def _calc_skewness_truncnorm(k_occurrence: np.ndarray):
         """ Hubness measure; corrected for non-negativity of k-occurrence.
 
         Hubness as skewness of truncated normal distribution
@@ -436,7 +436,7 @@ class Hubness(BaseEstimator):
         return skew_truncnorm
 
     @staticmethod
-    def _calc_gini_index(k_occurrence: np.ndarray, limiting='memory') -> float:
+    def _calc_gini_index(k_occurrence: np.ndarray, limiting='memory'):
         """ Hubness measure; Gini index
 
         Parameters
@@ -465,7 +465,7 @@ class Hubness(BaseEstimator):
         return numerator / denominator
 
     @staticmethod
-    def _calc_robinhood_index(k_occurrence: np.ndarray) -> float:
+    def _calc_robinhood_index(k_occurrence: np.ndarray):
         """ Hubness measure; Robin hood/Hoover/Schutz index.
 
         Parameters
@@ -492,7 +492,7 @@ class Hubness(BaseEstimator):
         return numerator / denominator
 
     @staticmethod
-    def _calc_atkinson_index(k_occurrence: np.ndarray, eps: float = .5) -> float:
+    def _calc_atkinson_index(k_occurrence: np.ndarray, eps: float = .5):
         """ Hubness measure; Atkinson index.
 
         Parameters
@@ -509,7 +509,7 @@ class Hubness(BaseEstimator):
         return 1. - 1. / k_occurrence.mean() * term
 
     @staticmethod
-    def _calc_antihub_occurrence(k_occurrence: np.ndarray) -> (np.array, float):
+    def _calc_antihub_occurrence(k_occurrence: np.ndarray):
         """Proportion of antihubs in data set.
 
         Antihubs are objects that are never among the nearest neighbors
@@ -543,7 +543,7 @@ class Hubness(BaseEstimator):
         hub_occurrence = k_occurrence[hubs].sum() / k / n_test
         return hubs, hub_occurrence
 
-    def score(self, X: np.ndarray = None, y=None, has_self_distances: bool = False) -> Union[float, dict]:
+    def score(self, X: np.ndarray = None, y=None, has_self_distances: bool = False):
         """ Estimate hubness in a data set.
 
         Hubness is estimated from the distances between all objects in X to all objects in Y.
