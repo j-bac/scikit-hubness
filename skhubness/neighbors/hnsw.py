@@ -65,7 +65,7 @@ class HNSW(ApproximateNearestNeighbor):
         self.post_processing = post_processing
         self.space = None
 
-    def fit(self, X, y=None) -> HNSW:
+    def fit(self, X, y=None):
         """ Setup the HNSW index from training data.
 
         Parameters
