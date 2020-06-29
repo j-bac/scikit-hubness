@@ -70,7 +70,7 @@ setup(
     keywords="machine-learning high-dimensional-data hubness nearest-neighbor "
              "data-science data-mining artificial-intelligence ",  # string of words separated by whitespace, not a list
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # previously used : packages=['skhubness', 'tests'],
-    python_requires='>=3.7',  # 'pip install' will check this
+    python_requires='>=3.6',  # 'pip install' will check this
     install_requires=['numpy',    # These packages will be installed by pip.
                       'scipy >= 1.2',    # For comparison with requirements.txt see also:
                       'scikit-learn == 0.21.3',  # https://packaging.python.org/en/latest/requirements.html
