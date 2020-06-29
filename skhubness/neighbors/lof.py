@@ -4,7 +4,7 @@
 #          Alexandre Gramfort <alexandre.gramfort@telecom-paristech.fr>
 # License: BSD 3 clause
 
-from __future__ import annotations
+#from __future__ import annotations
 
 import warnings
 import numpy as np
@@ -254,7 +254,7 @@ class LocalOutlierFactor(NeighborsBase, KNeighborsMixin, UnsupervisedMixin,
 
         return self.fit(X)._predict()
 
-    def fit(self, X, y=None) -> LocalOutlierFactor:
+    def fit(self, X, y=None):
         """Fit the model using X as training data.
 
         Parameters
