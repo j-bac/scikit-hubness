@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 # PEP 563: Postponed Evaluation of Annotations
-from __future__ import annotations
+#from __future__ import annotations
 
 from functools import partial
 from typing import Tuple, Union
@@ -88,7 +88,7 @@ class PuffinnLSH(BaseEstimator, ApproximateNearestNeighbor):
         self.memory = memory
         self.recall = recall
 
-    def fit(self, X, y=None) -> PuffinnLSH:
+    def fit(self, X, y=None):
         """ Build the puffinn LSH index and insert data from X.
 
         Parameters
@@ -290,7 +290,7 @@ class FalconnLSH(ApproximateNearestNeighbor):
         self.num_probes = num_probes
         self.radius = radius
 
-    def fit(self, X: np.ndarray, y: np.ndarray = None) -> FalconnLSH:
+    def fit(self, X: np.ndarray, y: np.ndarray = None):
         """ Setup the LSH index from training data.
 
         Parameters
