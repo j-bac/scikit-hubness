@@ -3,7 +3,7 @@
 # Author: Tom Dupre la Tour (original work)
 #         Roman Feldbauer (adaptions for scikit-hubness)
 # PEP 563: Postponed Evaluation of Annotations
-from __future__ import annotations
+#from __future__ import annotations
 import logging
 from typing import Union, Tuple
 
@@ -77,7 +77,7 @@ class RandomProjectionTree(BaseEstimator, ApproximateNearestNeighbor):
         self.search_k = search_k
         self.mmap_dir = mmap_dir
 
-    def fit(self, X, y=None) -> RandomProjectionTree:
+    def fit(self, X, y=None):
         """ Build the annoy.Index and insert data from X.
 
         Parameters
@@ -133,7 +133,7 @@ class RandomProjectionTree(BaseEstimator, ApproximateNearestNeighbor):
 
         return self
 
-    def kneighbors(self, X=None, n_candidates=None, return_distance=True) -> Union[Tuple[np.array, np.array], np.array]:
+    def kneighbors(self, X=None, n_candidates=None, return_distance=True):
         """ Retrieve k nearest neighbors.
 
         Parameters
