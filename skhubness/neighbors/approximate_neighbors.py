@@ -46,7 +46,7 @@ class ApproximateNearestNeighbor(ABC):
         pass  # pragma: no cover
 
     @abstractmethod
-    def kneighbors(self, X=None, n_candidates=None, return_distance=True) -> Union[Tuple[np.array, np.array], np.array]:
+    def kneighbors(self, X=None, n_candidates=None, return_distance=True):
         """ Retrieve k nearest neighbors.
 
         Parameters
