@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # Author: Roman Feldbauer
 # PEP 563: Postponed Evaluation of Annotations
-from __future__ import annotations
+#from __future__ import annotations
 from typing import Tuple, Union
 import numpy as np
 from sklearn.utils.validation import check_is_fitted, check_array
