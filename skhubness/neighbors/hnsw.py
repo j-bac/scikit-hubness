@@ -112,7 +112,7 @@ class HNSW(ApproximateNearestNeighbor):
 
     def kneighbors(self, X: np.ndarray = None,
                    n_candidates: int = None,
-                   return_distance: bool = True) -> Union[Tuple[np.array, np.array], np.array]:
+                   return_distance: bool = True):
         """ Retrieve k nearest neighbors.
 
         Parameters
