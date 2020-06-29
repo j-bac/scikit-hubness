@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # SPDX-License-Identifier: BSD-3-Clause
 
-from __future__ import annotations
+# from __future__ import annotations
 import warnings
 
 import numpy as np
@@ -38,7 +38,7 @@ class DisSimLocal(HubnessReduction):
         self.squared = squared
 
     def fit(self, neigh_dist: np.ndarray, neigh_ind: np.ndarray, X: np.ndarray,
-            assume_sorted: bool = True, *args, **kwargs) -> DisSimLocal:
+            assume_sorted: bool = True, *args, **kwargs):
         """ Fit the model using X, neigh_dist, and neigh_ind as training data.
 
         Parameters
@@ -90,7 +90,7 @@ class DisSimLocal(HubnessReduction):
         return self
 
     def transform(self, neigh_dist: np.ndarray, neigh_ind: np.ndarray, X: np.ndarray,
-                  assume_sorted: bool = True, *args, **kwargs) -> (np.ndarray, np.ndarray):
+                  assume_sorted: bool = True, *args, **kwargs):
         """ Transform distance between test and training data with DisSimLocal.
 
         Parameters
