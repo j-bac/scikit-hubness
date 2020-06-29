@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # Author: Roman Feldbauer (adaptions for scikit-hubness)
 # PEP 563: Postponed Evaluation of Annotations
-from __future__ import annotations
+#from __future__ import annotations
 import logging
 import pathlib
 from typing import Union, Tuple
@@ -110,7 +110,7 @@ class NNG(BaseEstimator, ApproximateNearestNeighbor):
         self.num_outgoing = num_outgoing
         self.epsilon = epsilon
 
-    def fit(self, X, y=None) -> NNG:
+    def fit(self, X, y=None):
         """ Build the ngtpy.Index and insert data from X.
 
         Parameters
