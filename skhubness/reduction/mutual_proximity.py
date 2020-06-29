@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # SPDX-License-Identifier: BSD-3-Clause
 
-from __future__ import annotations
+# from __future__ import annotations
 import warnings
 
 import numpy as np
@@ -38,7 +38,7 @@ class MutualProximity(HubnessReduction):
         self.method = method
         self.verbose = verbose
 
-    def fit(self, neigh_dist, neigh_ind, X=None, assume_sorted=None, *args, **kwargs) -> MutualProximity:
+    def fit(self, neigh_dist, neigh_ind, X=None, assume_sorted=None, *args, **kwargs):
         """ Fit the model using neigh_dist and neigh_ind as training data.
 
         Parameters
