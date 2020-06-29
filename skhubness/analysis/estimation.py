@@ -12,7 +12,7 @@ Austrian Research Institute for Artificial Intelligence (OFAI) and
 University of Vienna, Division of Computational Systems Biology (CUBE)
 Contact: <roman.feldbauer@univie.ac.at>
 """
-from __future__ import annotations
+#from __future__ import annotations
 from multiprocessing import cpu_count
 from tqdm.auto import tqdm
 from typing import Union
