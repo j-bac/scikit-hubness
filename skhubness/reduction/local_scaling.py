@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # SPDX-License-Identifier: BSD-3-Clause
 
-from __future__ import annotations
+# from __future__ import annotations
 import warnings
 
 import numpy as np
@@ -41,7 +41,7 @@ class LocalScaling(HubnessReduction):
         self.method = method
         self.verbose = verbose
 
-    def fit(self, neigh_dist, neigh_ind, X=None, assume_sorted: bool = True, *args, **kwargs) -> LocalScaling:
+    def fit(self, neigh_dist, neigh_ind, X=None, assume_sorted: bool = True, *args, **kwargs):
         """ Fit the model using neigh_dist and neigh_ind as training data.
 
         Parameters
@@ -79,7 +79,7 @@ class LocalScaling(HubnessReduction):
         return self
 
     def transform(self, neigh_dist, neigh_ind, X=None,
-                  assume_sorted: bool = True, *args, **kwargs) -> (np.ndarray, np.ndarray):
+                  assume_sorted: bool = True, *args, **kwargs):
         """ Transform distance between test and training data with Mutual Proximity.
 
         Parameters
